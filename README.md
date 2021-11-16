@@ -5,7 +5,7 @@
 
 #   Description
 
-Manage socket.io's namespaces like services and actions.
+This is a fork of the package moleculer-socketio created and managed by David Roman.
 
 # Project example
 
