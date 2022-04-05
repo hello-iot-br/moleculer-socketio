@@ -304,7 +304,7 @@ module.exports = {
 				this.logger.info(`### ${key} - event - connection`);
 
 				this.hash_events[`${key}.${event_connection.name}`](client_socket);
-				client_socket.on("disconnect", this.hash_events[`${key}.${event_disconnect.name}`]);
+				client_socket.on("disconnect", this.hash_events[`${key}.${event_disconnect.name}`].bind(this, client_socket));
 
 				events.map((event) => {
 					// this.logger.info(`${key} - ${event.name} - subscribed`, this.hash_events[`${key}.${event.name}`]);
